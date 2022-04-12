@@ -6,6 +6,7 @@ import Input from '@/components/Form/Input'
 import GuestLayout from '@/components/Layouts/GuestLayout'
 import { useAuth } from '@/hooks/auth'
 import { Form, Formik, FormikHelpers } from 'formik'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -22,7 +23,7 @@ export default function PasswordReset() {
 
     const [errors, setErrors] = useState([])
     const [status, setStatus] = useState(null)
-    const [initialValues, setInitialValues] = useState({
+    const [initialValues, setInitialValues] = useState<Values | any>({
         email: router.query.email,
         password: '',
         password_confirmation: '',
@@ -47,7 +48,7 @@ export default function PasswordReset() {
         <>
             <GuestLayout>
                 <AuthCard
-                    logo={<img
+                    logo={<Image
                         src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                         className="w-full"
                         alt="Sample image"

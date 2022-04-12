@@ -8,6 +8,7 @@ import GuestLayout from '@/components/Layouts/GuestLayout'
 import SocialMidias from '@/components/MidiasSocial'
 import { useAuth } from '@/hooks/auth'
 import { Form, Formik, FormikHelpers } from 'formik'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -27,6 +28,7 @@ export default function Register() {
         redirectIfAuthenticated: '/dashboard',
     })
     const [errors, setErrors] = useState([])
+    const [status, setStatus] = useState(null)
 
     let schema = yup.object().shape({
         name: yup.string().required("Nome é obrigátorio"),
@@ -41,7 +43,7 @@ export default function Register() {
         <>
             <GuestLayout>
                 <AuthCard
-                    logo={<img
+                    logo={<Image
                         src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                         className="w-full"
                         alt="Sample image"

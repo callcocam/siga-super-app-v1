@@ -6,6 +6,7 @@ import Input from "@/components/Form/Input";
 import GuestLayout from "@/components/Layouts/GuestLayout";
 import { useAuth } from "@/hooks/auth";
 import { Form, Formik, FormikHelpers } from "formik";
+import Image from "next/image";
 import { useState } from "react";
 import * as yup from 'yup';
 
@@ -26,7 +27,7 @@ export default function ForgotPassword() {
       <>
          <GuestLayout>
             <AuthCard
-               logo={<img
+               logo={<Image
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
                   className="w-full"
                   alt="Phone image"

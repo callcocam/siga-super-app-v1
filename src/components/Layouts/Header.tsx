@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 export default function Header({ user }: any) {
@@ -47,7 +48,7 @@ export default function Header({ user }: any) {
         lg:mt-0
         mr-1
       " href="#">
-                        <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" style={{ height: '15px' }} alt=""
+                        <Image src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" style={{ height: '15px' }} alt=""
                             loading="lazy" />
                     </a>
                     {/* <!-- Left links --> */}
@@ -167,7 +168,7 @@ export default function Header({ user }: any) {
                     <div className="dropdown relative">
                         <a className="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton2" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" className="rounded-full"
+                            <Image src="https://mdbootstrap.com/img/new/avatars/2.jpg" className="rounded-full"
                                 style={{ height: '25px', width: '25px' }} alt="" loading="lazy" />
                         </a>
                         <ul className="

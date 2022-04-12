@@ -22,7 +22,7 @@ const Menu: React.ForwardRefRenderFunction<unknown, Props> = (
         subMenuBullets = false,
         innerSubMenuArrows = true,
         ...rest
-    },
+    }:any,
     ref,
 ) => {
     const menuRef: LegacyRef<HTMLElement> = (ref as any) || React.createRef<HTMLElement>();

@@ -1,7 +1,6 @@
 import { useAuth } from '@/hooks/auth'
 import { useState } from 'react'
 import Header from './Header'
-import 'react-pro-sidebar/dist/css/styles.css';
 import Aside from './Sidebar/Layout/Aside';
 import Main from './Main';
 
@@ -31,7 +30,7 @@ export default function AppLayout({ header, children }: any) {
     return (
         <div className="bg-gray-100 flex flex-col min-h-screen w-full">
             <Header user={user} />
-            <div className='flex'>
+            <div className='flex  min-h-screen relative'>
                 <Aside
                     image={image}
                     collapsed={collapsed}

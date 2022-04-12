@@ -18,6 +18,11 @@ export default <any>{
       viewSource: 'عرض الكود',
     },
     en: {
+      SignOut: 'SignOut',
+      Users: 'Users',
+      Posts: 'Posts',
+      App: 'App',
+      Dashboard: 'Dashboard',
       title: 'React Pro Sidebar',
       sidebarTitle: 'Pro Sidebar',
       description:

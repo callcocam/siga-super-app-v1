@@ -1,5 +1,6 @@
 import React, { forwardRef, createContext, useEffect, useState } from 'react';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 export type Props = React.HTMLAttributes<HTMLElement> & {
   collapsed?: boolean;
@@ -41,10 +42,10 @@ const Sidebar: React.ForwardRefRenderFunction<unknown, Props> = (
     onToggle,
     style = {},
     ...rest
-  }:any,
+  }: any,
   ref,
 ) => {
-  
+
   const [sidebarState, setSidebarState] = useState({
     collapsed: typeof collapsed === 'undefined' ? false : collapsed,
     rtl: typeof rtl === 'undefined' ? false : rtl,
@@ -81,7 +82,7 @@ const Sidebar: React.ForwardRefRenderFunction<unknown, Props> = (
         {...rest}
       >
         <div className="pro-sidebar-inner">
-          {image ? <img src={image} alt="sidebar background" className="sidebar-bg" /> : null}
+          {image ? <Image src={image} alt="sidebar background" className="sidebar-bg" /> : null}
           <div className="pro-sidebar-layout">{children}</div>
         </div>
         <div

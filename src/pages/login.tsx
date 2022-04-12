@@ -14,6 +14,7 @@ import { useState } from 'react';
 import SocialMidias from '@/components/MidiasSocial';
 import AuthSessionStatus from '@/components/AuthSessionStatus';
 import AuthValidationErrors from '@/components/AuthValidationErrors';
+import Image from 'next/image';
 
 interface Values {
     email: string;
@@ -41,7 +42,7 @@ export default function Login() {
         <>
             <GuestLayout>
                 <AuthCard
-                    logo={<img
+                    logo={<Image
                         src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
                         className="w-full"
                         alt="Phone image"

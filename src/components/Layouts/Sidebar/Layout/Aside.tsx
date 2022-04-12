@@ -1,6 +1,6 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaSignOutAlt } from 'react-icons/fa';
+import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart, FaSignOutAlt, FaUserAlt } from 'react-icons/fa';
 import sidebarBg from '@/assets/bg2.jpg';
 import {
     Menu,
@@ -57,6 +57,11 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }: any) => 
                     <MenuItem icon={<FaGem />}>
                         <Link href={`/posts`} >
                             <a> {intl.formatMessage({ id: 'components' })}</a>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem icon={<FaUserAlt />}>
+                        <Link href={`/users`} >
+                            <a> {intl.formatMessage({ id: 'Users' })}</a>
                         </Link>
                     </MenuItem>
                 </Menu>
